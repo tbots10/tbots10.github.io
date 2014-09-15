@@ -1,0 +1,15 @@
+h1{color:Red
+}
+	.high {
+		color: rgb(190, 0, 0); 
+	}
+	.medium {
+		color: rgb(255, 200, 0);
+	}
+	.low {
+		color: Green;
+	}
+	.check {
+		list-style-image:url("Images/small-check-mark.jpg");
+		
+	}
