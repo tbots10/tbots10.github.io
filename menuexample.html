@@ -11,6 +11,10 @@ h1 {color: #AAA; border-bottom: 1px solid; margin-bottom: 0;}
 div#nav {float: left; width: 7em;
   background: #FDD;}
 div#nav ul {margin: 0; padding: 0; width: 7em;}
+div#nav li {position: relative; list-style: none; margin: 0; }
+div#nav li.submenu {background: yellow;}
+div#nav ul ul {position: absolute; top: 0; left: 7em;
+	background: white; border: 1px solid; }
 </style>
 </head>
 <body>
@@ -19,7 +23,7 @@ div#nav ul {margin: 0; padding: 0; width: 7em;}
 <div id="nav">
 <ul>
  <li><a href="/">Home</a></li>
- <li><a href="/services/">Services</a>
+ <li class= "submenu"><a href="/services/">Services</a>
   <ul>
    <li><a href="/services/strategy/">Strategy</a></li>
    <li><a href="/services/optimize/">Optimization</a></li>
@@ -28,10 +32,10 @@ div#nav ul {margin: 0; padding: 0; width: 7em;}
   </ul>
  </li>
  <li><a href="/events/">Events</a></li>
- <li><a href="/pubs/">Publications</a>
+ <li class= "submenu"><a href="/pubs/">Publications</a>
   <ul>
    <li><a href="/pubs/articles/">Articles</a></li>
-   <li><a href="/pubs/tuts/">Tutorials</a>
+   <li class= "submenu"><a href="/pubs/tuts/">Tutorials</a>
     <ul>
      <li><a href="/pubs/tuts/html/">HTML</a></li>
      <li><a href="/pubs/tuts/css/">CSS</a></li>
