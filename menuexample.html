@@ -12,19 +12,26 @@ div#nav {float: left; width: 7em;
   background: #FDD;}
 div#nav ul {margin: 0; padding: 0; width: 7em;}
 div#nav li {position: relative; list-style: none; margin: 0; }
-div#nav li.submenu {background: yellow;}
+div#nav li:hover {background: #EBB;}
+div#nav li.submenu {background: url(submenu.gif) 95% 50% no-repeat;}
+div#nav li a {display: block; padding: 0.25em 0 0.25em 0.5em; text-decoration: none;}
 div#nav ul ul {position: absolute; top: 0; left: 7em;
-	background: white; border: 1px solid; }
+	display: none;  }
+div#nav ul.level1 li.submenu:hover ul.level2,
+div#nav ul.level2 li.submenu:hover ul.level3 {display:block;}
+
+
+
 </style>
 </head>
 <body>
 <h1>Adipiscing Rhubarb</h1>
 
 <div id="nav">
-<ul>
+<ul class="level1">
  <li><a href="/">Home</a></li>
  <li class= "submenu"><a href="/services/">Services</a>
-  <ul>
+  <ul class="level2">
    <li><a href="/services/strategy/">Strategy</a></li>
    <li><a href="/services/optimize/">Optimization</a></li>
    <li><a href="/services/guidance/">Guidance</a></li>
@@ -33,7 +40,7 @@ div#nav ul ul {position: absolute; top: 0; left: 7em;
  </li>
  <li><a href="/events/">Events</a></li>
  <li class= "submenu"><a href="/pubs/">Publications</a>
-  <ul>
+  <ul class="level2">
    <li><a href="/pubs/articles/">Articles</a></li>
    <li class= "submenu"><a href="/pubs/tuts/">Tutorials</a>
     <ul>
