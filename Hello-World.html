@@ -15,10 +15,11 @@
          
              
          nav {
-             margin-top: 40px;
+             margin-top: 60px;
              margin-bottom: 0px;
-             background-color: #00BFFF;
+             
 			 color: black;
+			 background: transparent;
 			 
          }
             a:hover {
@@ -32,8 +33,8 @@
                 text-decoration: none;
             }
         a:visited {
-            color: green;
-            background-color: magenta;
+            color: black;
+            background-color: #00BFFF;
         }
          }
          nav li {
@@ -47,22 +48,32 @@
          }
          section {
              float: left;
-             width: 20%;
+             width: 15%;
              height: 500px;
              background-color: #eeeeee;
              color: black;
+			 padding: 10px;
              
          }
          aside {
              float: left;
              width: 80%;
+			 padding: 10px;
              height: 500px;
              background-color: #CDE9E3;
          }
-         footer {
-             clear: both;
-             
-         }
+		.footer{
+			position:fixed;
+			bottom:0;
+			left:50%;
+			margin-left:-250px; 
+			background-color:#00BFFF;
+			width:500px;
+			height:100px;
+			text-align: center;
+		}  
+			
+
          body {
              background-image: url("http://happyimages.net/wp-content/uploads/2014/09/wallpaper-white-2.jpg");
 			background-size: cover;
@@ -86,14 +97,18 @@
              </ul>
          </nav>
          <section>
+		 <h3>About This Page</h3>
+		 <p>This page is my first web-page and the fist project in the web design world. 
              
          </section>
          <aside>
              <img src= "./Images/Tom.jpg" width="260px">
             
          </aside>
-         <footer>
-             
+         <footer div class="footer"></div>
+		 
+             <p>Copyright @ Thomas Bottem 2014</p>
+			 
          </footer>
      </body>
 
