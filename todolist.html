@@ -1,0 +1,37 @@
+<html>
+<link rel="stylesheet" href="todolist.css" type="text/css">
+<head>
+    <title>Add Job</title>
+</head>
+
+<body>
+    
+    <script type="text/javascript">
+    function onClick() {
+		var jobs = document.getElementById("item").value;
+		document.getElementById("List").innerHTML += "<li>" + jobs + "</li>";		
+    }
+    </script>
+	
+	<p>Jobs:<input id = "item" type="text" value="" size="40"> </p>
+    <button type="text" onClick="onClick()">ADD</button>
+    
+	<h1>Todo List</h1>
+		<ul id = "List"></ul>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
