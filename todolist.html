@@ -3,9 +3,13 @@
 <head>
     <title>Add Job</title>
 </head>
-
+<main>
+	<h1>Todo List</h1>
+		<ul id = "List"></ul>
+</main>
 <body>
     
+    	
     <script type="text/javascript">
     function onClick() {
 		var jobs = document.getElementById("item").value;
@@ -13,25 +17,23 @@
     }
     </script>
 	
-	<p>Jobs:<input id = "item" type="text" value="" size="40"> </p>
+	<aside>
+	<label for="List">Enter Task</label> 
+	<input id = "item" type="text" value="" size="40">
+	<select id="priority">
+		<option>High</option>
+		<option>Medium</option>
+		<option>Low</option>
+	</select> 
     <button type="text" onClick="onClick()">ADD</button>
+    </aside>
     
-	<h1>Todo List</h1>
-		<ul id = "List"></ul>
+   
+	
+	
+    
 
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 </html>
