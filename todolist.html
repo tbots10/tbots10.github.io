@@ -3,33 +3,39 @@
 <head>
     <title>Add Job</title>
 </head>
-<main>
-	<h1>Todo List</h1>
-		<ul id = "List"></ul>
-</main>
+
 <body>
     
     	
-    <script type="text/javascript">
-    function onClick() {
-		var jobs = document.getElementById("item").value;
-		document.getElementById("List").innerHTML += "<li>" + jobs + "</li>";		
-    }
-    </script>
+	<script type = "text/javascript">
+		addTask = function() {
+			i = document.querySelector("#item")
+			bl = document.querySelector("#List")
+			pr = document.querySelector("#priority")
+			li = document.createElement("li")
+			li.innerHTML = '<input type="checkbox">' + i.value
+			li.className = pr.value
+			bl.appendChild(li)
+			i.value = ""
+			
+		}
+	</script>
 	
 	<aside>
 	<label for="List">Enter Task</label> 
 	<input id = "item" type="text" value="" size="40">
 	<select id="priority">
+		<option>Don't Care</option>
 		<option>High</option>
 		<option>Medium</option>
 		<option>Low</option>
 	</select> 
-    <button type="text" onClick="onClick()">ADD</button>
+    <button type="text" onClick="addTask()">ADD</button>
     </aside>
     
    
-	
+	<h1>Todo List</h1>
+		<ul id = "List"></ul>
 	
     
 
@@ -37,3 +43,5 @@
 
 
 </html>
+
+

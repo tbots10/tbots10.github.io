@@ -1,4 +1,6 @@
 
+
+
 body {
 	text-align: center;
 	
@@ -7,12 +9,16 @@ body {
 
 h1 {
 	color: red;
+	text-align: center;
 	}
-	
+ul#List {
+	list-style-type: none;
+}
 aside {
 	background-color: Black;
 	color: #C0C0C0;
-	
-	
-	
+		
+}
+li.High {
+	color: red;
 }
