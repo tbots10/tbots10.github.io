@@ -22,3 +22,9 @@ aside {
 li.High {
 	color: red;
 }
+li.Medium {
+	color: orange;
+}
+li.Low {
+	color: green;
+}
