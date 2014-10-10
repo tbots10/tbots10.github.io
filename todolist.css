@@ -28,3 +28,6 @@ li.Medium {
 li.Low {
 	color: green;
 }
+li.done {
+	text-decoration: line-through;
+}

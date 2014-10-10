@@ -47,6 +47,45 @@
 			i.value = ""
 			
 		}
+		
+		doneTask = function() {
+			c = this.parentNode.className;
+			if(c.length > 5 && c.substring(c.length - 5) == " done"){
+				this.parentNode.className = c.substring(0,c.length - 5);
+			}
+			else{
+				this.parentNode.className += " done"
+			}
+				
+			
+			
+			
+			
+			
+			//newList = []
+			//List = document.querySelectorAll('li')
+			//for(i=0; i< List.length; i++) {
+			//	newList.push(List[i].innerText)
+			//}
+		}
+		
+		addTask = function() {
+			var newli;
+			task = document.querySelector("#item");
+			taskList = document.querySelector("#List");
+			priorityValue = document.querySelector("#priority").value;
+			newli = document.createElement('li');
+			newli.className = priorityValue;
+			newcb = document.createElement('input');
+			newcb.type = 'checkbox';
+			newli.appendChild(newcb);
+			t = document.createTextNode(task.value);
+			newli.appendChild(t);
+			taskList.appendChild(newli);
+			task.value = "";
+			newcb.onclick = doneTask;
+		}
+			
 	</script>
 	
 	<aside>
