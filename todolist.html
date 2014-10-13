@@ -4,7 +4,7 @@
     <title>Add Job</title>
 </head>
 
-<body>
+<body onload = "restoreTasks()">
     
     	
 	<script type = "text/javascript">
@@ -49,25 +49,48 @@
 		}
 		
 		doneTask = function() {
-			c = this.parentNode.className;
-			if(c.length > 5 && c.substring(c.length - 5) == " done"){
-				this.parentNode.className = c.substring(0,c.length - 5);
+			if(this.checked) {
+				this.parentNode.classList.add("done");
 			}
-			else{
-				this.parentNode.className += " done"
+			else {
+				this.parentNode.classList.remove("done");
 			}
-				
+			localSave()
+		
 			
-			
-			
-			
-			
-			//newList = []
-			//List = document.querySelectorAll('li')
-			//for(i=0; i< List.length; i++) {
-			//	newList.push(List[i].innerText)
-			//}
 		}
+		
+		localSave = function() {
+			res = []
+			var i;
+			allEntries = document.querySelectorAll('li');
+			for(i=0; i < allEntries.length; i++) {
+				if(!allEntries[i].classList.contains("done")) {
+					res.push(allEntries[i].innerText);
+				}
+			
+			}
+			localStorage.setItem("todoDatabase",JSON.stringify(res))
+		}
+		restoreTasks = function() {
+			allTasks = JSON.parse(localStorage.getItem('todoDatabase'));
+			taskList = document.querySelector("#List");
+			for(i=0; i < allTasks.length; i++) {
+				newli = document.createElement('li');
+				t = document.createTextNode(allTasks[i]);
+				taskList = document.querySelector("#List");
+				newli = document.createElement('li');
+				newcb = document.createElement('input');
+				newcb.type = 'checkbox';
+				newli.appendChild(newcb);
+				newli.appendChild(t);
+				taskList.appendChild(newli);
+				newcb.onclick = doneTask;				
+			}
+		}
+		
+		
+		
 		
 		addTask = function() {
 			var newli;
@@ -84,6 +107,15 @@
 			taskList.appendChild(newli);
 			task.value = "";
 			newcb.onclick = doneTask;
+			localSave()
+				
+			newList = []
+			List = document.querySelectorAll('li')
+			for(i=0; i< List.length; i++) {
+				newList.push(List[i].innerText)
+			}
+			
+		
 		}
 			
 	</script>
@@ -109,5 +141,7 @@
 
 
 </html>
+
+
 
 
