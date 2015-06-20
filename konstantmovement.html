@@ -13,6 +13,7 @@ $(document).ready(function(){
          pause: false
      });
 });
+
 </script>	 
          <style>
          header {
@@ -63,12 +64,16 @@ $(document).ready(function(){
          section {
              float: left;
              width: 15%;
-             height: 500px;
-              background: lightgray;
+             height: 600px;
+             background: lightgray;
              color: black;
 			 padding: 10px;
-             
+             margin-left: 10px;
+			 text-align: center;
+
+	
          }
+		 
          aside {
              float: left;
              width: 80%;
@@ -85,6 +90,8 @@ $(document).ready(function(){
 			font-size: 52px;
 			font-family: "trebuchet ms", sans-serif;    
 		}
+		
+
 		.item{
 			background: #333;    
 			text-align: center;
@@ -105,7 +112,16 @@ $(document).ready(function(){
 			background-size: 100% auto;
              margin: 0px;
          }
-		 
+		
+		.dropdown-menu {
+			color: black;
+			text-align: center;
+            	
+		}
+		.caret {
+			color: black;
+			
+		}
          </style>
 
      </head>
@@ -117,25 +133,32 @@ $(document).ready(function(){
          <nav>
              <ul>
              <li><a href="https://soundcloud.com/Konstant-Movement" target="_blank">Soundcloud</a></li>
-			 <li><a href="Doksrobotiks.html" target="_blank">Doks Robotiks</a></li>
+			 <li><a href="http://www.doksrobotiks.com/" target="_blank">Doks Robotiks</a></li>
              <li><a href="https://konstantmovement.bandcamp.com/" target="_blank">Bandcamp</a></li>
-             
+             <li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+				More!
+               <b class="caret"></b>
+			   </a>
+				<ul class="dropdown-menu">
+					<li><a href="http://www.abovenbeyond.clothing/home" target="_blank" style="text-decoration: none; font-size: .5em;">Above N' Beyond</a></li>
+					
+					<li><a href="https://www.youtube.com/watch?v=GK8UOJyGVAI" target="_blank" style="text-decoration: none; font-size: .5em;">Youtube - Dreamin</a></li>
+				
+					<li><a href="https://www.youtube.com/watch?v=vXjdUQDRd-0" target="_blank" style="text-decoration: none; font-size: .5em;">Youtube - Mr. Nice</a></li>
+					
+					<li><a href="https://soundcloud.com/dematlas" target="_blank" style="text-decoration: none; font-size: .5em;">dem atlas</a></li>
              </ul>
+			 
          </nav>
          <section>
+		 
 		 <h3>Check out more!</h3>
+		
 		 <ul>
-			<li>
-			</li>
-			<li>
-			</li>
-			<li>
-			</li>
-			<li>
-			</li>
-			<li>
-			</li>
-		 </ul>
+			
+		</ul>
+		
              
          </section>
          
