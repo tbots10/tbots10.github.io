@@ -1,1 +1,2 @@
-READ ME
+# NBA
+tbots10.github.io/NBA
