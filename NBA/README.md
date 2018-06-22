@@ -1,2 +1,2 @@
 # NBA
-tbots10.github.io/NBA
+https://tbots10.github.io/NBA
